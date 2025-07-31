@@ -1,0 +1,60 @@
+@use '../utils' as *;
+
+
+.tp-breadcrumb-height{
+    padding-top: 130px;
+    padding-bottom: 145px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+    @media #{$md,$xs}{
+        padding: 120px 0;
+    }
+}
+
+.tp-breadcrumb{
+    &__title{
+        font-size: 55px;
+        font-style: normal;
+        font-weight: 500;
+        text-transform: capitalize;
+        @media #{$xxl,$xl}{
+            font-size: 50px;
+        }
+        @media #{$lg}{
+            font-size: 50px;
+        }
+        @media #{$md}{
+            font-size: 45px;
+        }
+        @media #{$xs}{
+            font-size: 40px;
+        }      
+    }
+    &__list{
+        display: inline-block;
+        padding: 5px 20px;
+        margin-bottom: 15px;
+        background-color: var(--tp-common-white);
+        border-radius: 30px;
+        & span {
+            color: var(--tp-common-pink-4);
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 700;
+            text-transform: uppercase;
+            @media #{$md,$xs}{
+                font-size: 13px;
+            }
+            &.dvdr{
+                & i{
+                    color: var(--tp-common-white);
+                    font-weight: 400;
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+}
+
+

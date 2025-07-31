@@ -1,0 +1,254 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  06. brand css start 
+/*----------------------------------------*/
+
+.tp-slider-text{
+    &__space{
+        padding-top: 90px;
+        padding-bottom: 140px;
+        @media #{$lg,$md}{
+            padding-top: 50px;
+            padding-bottom: 120px;
+        } 
+        @media #{$xs}{
+            padding-top: 40px;
+            padding-bottom: 80px;
+        } 
+    }
+    &__bg{
+        background-color: var(--tp-common-white);
+        box-shadow: 0px 4px 17px rgba(0, 0, 0, 0.09);
+        height: 60px;
+        line-height: 60px;
+        transform: rotate(4.4deg) translateY(61px);
+        @media #{$xs}{
+            height: 60px;
+            line-height: 60px;
+            transform: rotate(0deg);
+            margin-bottom: 30px;
+        } 
+    }
+    &__text{
+        & span {
+            font-family: 'Syne', sans-serif;
+            font-weight: 700;
+            font-size: 27px;
+            color: var(--tp-common-black);
+            text-transform: uppercase;
+            @media #{$xxxl}{
+                font-size: 20px;
+            }
+            @media #{$xxl,$xl}{
+                font-size: 18px;
+            }            
+            @media #{$lg,$md}{
+                font-size: 17px;
+            }            
+            @media #{$xs}{
+                font-size: 12px;
+            }            
+        }
+        & svg {
+            margin-right: 38px;
+            line-height: 0;
+            transform: translateY(-3px);
+            @media #{$xs}{
+                width: 14px;
+            }   
+        }
+    }
+}
+.tp-slider-text-active{
+    & .slick-slide {
+        margin: 0 25px;
+    }
+}
+.tp-slider-text-2 {
+    &__bg{
+        background-color: var(--tp-common-white);
+        background: #F9E9F1;
+        height: 60px;
+        line-height: 60px;
+        transform: rotate(-6.13deg);
+        @media #{$xs}{
+            transform: rotate(0deg);
+        }
+    }
+    &__text{
+        & span {
+            font-family: 'Syne', sans-serif;
+            font-weight: 700;
+            font-size: 27px;
+            color: var(--tp-common-black);
+            text-transform: uppercase;
+            @media #{$xxxl}{
+                font-size: 20px;
+            }
+            @media #{$xxl,$xl}{
+                font-size: 18px;
+            }
+            @media #{$lg,$md}{
+                font-size: 17px;
+            }
+            @media #{$xs}{
+                font-size: 12px;
+            }   
+        }
+        & svg {
+            margin-left: 31px;
+            line-height: 0;
+            transform: translateY(-3px);
+            @media #{$xs}{
+                width: 14px;
+            }   
+        }
+    }
+    &__gradiant-bg{
+        background: linear-gradient(90.33deg, #FF4D8D 49.71%, #9C42EB 82%, #4D81FB 100.53%);
+        height: 60px;
+        line-height: 60px;
+        transform: rotate(-6.13deg);
+        @media #{$xs}{
+            height: 60px;
+            line-height: 60px;
+            transform: rotate(0deg);
+        } 
+        & .tp-slider-text-2__text{
+            & span {
+                color: var(--tp-common-white);
+                @media #{$xxxl}{
+                    font-size: 20px;
+                }
+                @media #{$xxl}{
+                    font-size: 18px;
+                }
+            }
+            & svg {
+                margin-left: 31px;
+                line-height: 0;
+                transform: translateY(-3px);
+            }
+        }
+    }
+}
+.tp-slider-text-2-active {
+    & .slick-slide {
+        margin: 0 25px;
+    }
+}
+.tp-brand-3-active {
+    & .slick-slide {
+        margin: 0 15px;
+    }
+}
+.tp-slider-text-3 {
+    &__ptb {
+        padding: 100px 0;
+        @media #{$xs}{
+            padding: 50px 0;
+        }
+    }
+    &__space {
+        padding-top: 70px;
+        @media #{$xl}{
+            padding-bottom: 100px;
+        }
+        @media #{$lg}{
+            padding-bottom: 100px;
+        }
+        @media #{$md,$xs}{
+            padding-bottom: 80px;
+        }
+    }
+    &__item{
+        padding: 20px 0;
+        animation: scrollText-2 20s infinite linear;
+        & span {
+            font-weight: 400;
+            font-size: 120px;
+            color: #E7E7E7;
+            line-height: 1;
+            white-space: nowrap;
+            @media #{$xxl}{
+                font-size: 90px;
+            }
+            @media #{$xl}{
+                font-size: 80px;
+            }
+            @media #{$xs}{
+                font-size: 55px;
+            }
+            & i {
+                background: linear-gradient(180deg, #FE4386 0%, #B63AD8 51.04%, #A838E8 60.94%, rgba(254, 57, 42, 0) 100%, #5779F9 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                text-fill-color: transparent;
+                font-style: normal;
+                font-weight: 400;
+            }
+           
+        }
+        &.color {
+            & span {
+                font-family: 'Montaga', serif;
+                & strong {
+                    background: linear-gradient(180deg, #FE4386 0%, #B63AD8 51.04%, #A838E8 60.94%, rgba(254, 57, 42, 0) 100%, #5779F9 100%);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    background-clip: text;
+                    text-fill-color: transparent;
+                    font-style: normal;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+}
+.tp-brand-5 {
+    &__bg{
+        background-color: #FFF;
+        border-top: 1px solid #F6EEF9;
+    }
+    &__item{
+        padding:34px 70px;
+        position: relative;
+        &::after{
+            position: absolute;
+            content: '';
+            top: 0;
+            right: 0;
+            width: 1px;
+            height:120px;
+            background:  #F6EEF9;
+        }
+        & img {
+            line-height: 120px; 
+        }
+    }
+}
+.tp-brand-6 {
+    &__title {
+        font-size: 36px;
+        font-weight: 500;
+        line-height: 1.5;
+        text-transform: capitalize;
+        @media #{$lg}{
+            font-size: 28px;
+        }
+        @media #{$md}{
+            font-size: 27px;
+            & br {
+                display: none;
+            }
+        }
+        @media #{$xs}{
+            font-size: 24px;
+            & br {
+                display: none;
+            }
+        }
+    }
+}

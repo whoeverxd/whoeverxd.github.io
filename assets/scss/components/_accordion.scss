@@ -1,0 +1,203 @@
+@use '../utils' as *;
+
+
+.tp-custom-accordion {
+    & .accordion-buttons {
+        position: relative;
+        width: 100%;
+        padding: 22px 25px;
+        background-color: var(--tp-common-white);
+        text-align: left;
+        font-weight: 700;
+        font-size: 18px;
+        margin-bottom: 25px;
+        border: 1px solid transparent;
+        transition: .3s;
+        border-radius: 4px;
+        color: var(--tp-theme-1);
+        line-height: 1.2;
+        @media #{$xl} {
+            font-size: 17px;
+        }
+        @media #{$lg} {
+            padding: 25px 28px;
+            font-size: 18px;
+        }
+        @media #{$xs} {
+            padding: 25px 28px;
+            font-size: 16px;
+            padding-right: 40px;
+        }
+        @media #{$sm} {
+            font-size: 17px;
+        }
+        &::after {
+            position: absolute;
+            content: "\f068";
+            font-family: 'Font Awesome 5 Pro';
+            top:50%;
+            transform: translateY(-50%);
+            right: 30px;
+            font-size: 16px;
+            opacity: 1;
+            color: var(--tp-common-orange);
+            @media #{$xs} {
+                top: 35px;
+                right: 25px;
+                font-size: 13px;
+            }
+        }
+        &:not(.collapsed){
+            background: rgba(255, 255, 255, 0.50);
+            box-shadow: 0px 11px 12px 0px rgba(0, 0, 0, 0.08);
+        }
+        &.collapsed {
+            border: 1px solid #E3EBF4;
+            &::after {
+                content: '\f067';
+            }
+        }
+    }
+
+    & .collapsed {
+        position: relative;
+        z-index: 99;
+    }
+
+    & .accordion-body {
+        background-color: var(--tp-common-white);
+        padding-bottom: 20px;
+        padding-left: 25px;
+        padding-right: 50px;
+        position: relative;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 28px;
+        z-index: 1;
+        @media #{$xl}{
+            font-size: 14px;
+            padding-right: 65px;
+        }
+        @media #{$lg,$md}{
+            font-size: 14px;
+        }
+        @media #{$xs}{
+            font-size: 13px;
+            padding-right: 0px;
+        }
+        &::after{
+            position: absolute;
+            content: '';
+            top:6px;
+            left: 70px;
+            width: 1px;
+            height:75px;
+            background-color: var(--tp-common-orange);
+            @media #{$xs}{
+                display: none;
+                visibility: hidden;
+            }
+        }
+    }
+}
+.tp-custom-accordion-2 {
+    position: relative;
+    z-index: 2;
+    & .accordion-items {
+        margin-bottom: 20px;
+        background-color: var(--tp-common-white);
+        overflow: hidden;
+        border-radius:5px;
+        &.tp-faq-active{
+            border-radius:5px;
+        }
+    }
+    & .accordion-buttons {
+        position: relative;
+        width: 100%;
+        padding: 38px 28px;
+        text-align: left;
+        padding-right: 90px;
+        font-weight: 500;
+        color: #13141B;
+        font-family:var(--tp-ff-heading);
+        font-size: 24px;
+        line-height: 24px;
+        background-color: rgba(255, 255, 255, 0.5);
+        color: var(--tp-common-black);
+        transition: .3s;
+        @media #{$lg} {
+            padding: 25px 28px;
+            font-size: 20px;
+        }
+        @media #{$md} {
+            font-size: 18px;
+            padding: 25px 28px;
+        }
+        @media #{$xs} {
+            font-size: 18px;
+            padding: 25px 28px;
+        }
+        @media #{$sm} {
+            padding: 20px 28px;   
+        }
+        &:not(.collapsed){
+            color: var(--tp-common-purple-2);
+            &::after{
+                color: var(--tp-common-purple-2);
+            }
+        }
+        &::after {
+            position: absolute;
+            content: "\f062";
+            font-family: 'Font Awesome 5 Pro';
+            background-image: none;
+            top:50%;
+            transform: translateY(-50%);
+            right: 30px;
+            width: auto;
+            height: auto;
+            font-weight: 700;
+            font-size: 16px;
+            opacity: 1;
+            color: var(--tp-common-black);
+            text-align: center;
+            transition: .3s;
+        }
+
+        &.collapsed {
+            &::after {
+                content: '\f063';
+            }
+        }
+    }
+    & .collapsed {
+        position: relative;
+        z-index: 99;
+    }
+    & .accordion-body {
+        position: relative;
+        background-color: var(--tp-common-white);
+        padding: 0;
+        padding-top: 9px;
+        padding-bottom: 40px;
+        margin: 0 30px;
+        z-index: 1;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 30px;
+        color: #5C727D;
+        @media #{$xs}{
+            font-size: 15px;
+        }
+    }
+}
+.tp-service-details-faq{
+    & .tp-custom-accordion-2 .accordion-items{
+        border: 1px solid rgba(4, 18, 31, 0.08);
+        border-radius: 0;
+    }
+    & .tp-custom-accordion-2 .accordion-body{
+        border-top: 1px solid rgba(4, 18, 31, 0.08);
+    }
+}

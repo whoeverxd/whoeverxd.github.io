@@ -1,0 +1,132 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  04. banner css start 
+/*----------------------------------------*/
+.tp-banner {
+    &__left-box {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 50px 55px;
+        padding-right: 0;
+        padding-bottom: 35px;
+        @media #{$xs}{
+            padding: 50px 30px;
+        }
+    }
+    &__content{
+        position: relative;
+        z-index: 11;
+        &.color {
+            & p {
+                color: var(--tp-common-green);
+            }
+        }
+        & p {
+            color:var(--tp-common-white);
+            font-size: 12px;
+            font-weight: 500;
+            text-transform: uppercase;
+            margin-bottom: 0;
+            padding-bottom: 12px;
+        }
+        & span {
+            color: var(--tp-common-white);
+            font-family:var(--tp-common-white);
+            font-size: 16px;
+            font-weight: 400;
+            display: block;
+            padding-bottom: 25px;
+            & strong {
+                color: #FF8617;
+                padding-left: 5px;
+            }
+        }
+    }
+    &__title {
+        color: var(--tp-common-white);
+        font-size: 36px;
+        font-weight: 500;
+        line-height: 32.4px;
+        text-transform: capitalize;
+        padding-bottom: 10px;
+        @media #{$xl}{
+            font-size: 32px;
+        }
+        @media #{$lg,$md,$xs}{
+            font-size: 30px;
+        }
+    }
+    &__title-2 {
+        color: var(--tp-common-white);
+        font-size: 30px;
+        font-weight: 500;
+        line-height: 32.4px;
+        text-transform: capitalize;
+        padding-bottom: 10px;
+        @media #{$xl}{
+            font-size: 27px;
+        }
+        @media #{$lg,$md,$xs}{
+            font-size: 25px;
+        }
+    }
+    &__right-box {
+        background-color: #F3ECEA;
+        padding: 50px 35px;
+        padding-right: 0;
+        padding-bottom: 35px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        @media #{$xs}{
+            padding: 50px 30px;
+        }
+    }
+}
+.tp-banner-2 {
+    &__bg {
+        position: relative;
+        &::after{
+            content: '';
+            height: 135px;
+            width: 100%;
+            background-color: var(--tp-grey-2);
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            z-index: -1;
+        }
+    }
+    &__item {
+        padding-top: 70px;
+        padding-left: 50px;
+        padding-bottom: 55px;
+        border-radius: 16px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: right;
+        @media #{$lg,$xs}{
+           padding: 35px 0;
+           padding-left: 50px;
+        }
+        @media #{$xs}{
+            padding-left: 30px;
+        }
+        &.gradiant {
+            & .tp-banner__content {
+                margin-left: 300px;
+                @media #{$xl}{
+                    margin-left: 200px;
+                }
+                @media #{$lg}{
+                    margin-left: 150px;
+                }
+                @media #{$xs}{
+                    margin-left: 0px;
+                }
+            }     
+        }
+    }
+}

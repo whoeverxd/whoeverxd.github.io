@@ -1,0 +1,157 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  26. work css start 
+/*----------------------------------------*/
+.tp-work-2 {
+    &__blue-bg{
+        background: linear-gradient(116.21deg, #683DFB 15.24%, #5A9AF6 76.79%, #7101FF 100%);
+    }
+    &__form{
+        padding-top: 70px;
+        & form {
+            & input {
+                border-bottom: 1px solid var(--tp-common-white);
+                background-color: transparent;
+                color: var(--tp-common-white);
+                font-size: 18px;
+                font-family: 'Syne', sans-serif;
+                padding-left: 45px;
+                padding-right: 130px;
+                text-transform: capitalize;
+                @media #{$lg}{
+                    font-size: 15px;
+                } 
+                @include tp-placeholder {
+                    color: var(--tp-common-white);
+                }
+            }
+        }
+    }
+    &__icon {
+        position: absolute;
+        bottom:21px;
+        left: 3px;
+        margin-right: 45px;
+        &::after{
+            margin-left: 8px;
+            height: 12px;
+            width: 1px;
+            background-color: var(--tp-common-white);
+            content: '';
+            display: inline-block;
+        }
+        & span{
+            color: var(--tp-common-white);
+            font-size: 18px;
+        }
+    }
+    &__btn{
+        position: absolute;
+        right: 0;
+        bottom: 21px;
+        & button {
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 19px;
+            color: var(--tp-common-white);
+            font-family: 'Syne', sans-serif;
+            text-transform: capitalize;
+            & svg {
+                display: inline-block;
+                margin-left: 10px;
+                font-size: 18px;
+                transform: translateY(-2px);
+            }
+        }
+    }
+    &__thumb {
+        position: relative;
+        overflow: hidden;
+        @media #{$md,$xs}{
+            width: 100%;
+        }
+        & img {
+            transition: .6s;
+        }
+        &:hover {
+            & img {
+                transform: scale(1.2) rotate(-3deg);
+            }
+            & .tp-work-2__thumb-text {
+                transform: scale(1,1);
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
+    &__thumb-text {
+        position: absolute;
+        bottom: 90px;
+        left: 50px;
+        padding: 6px 15px;
+        padding-right: 40px;
+        background: #7681EB;
+        opacity: 0;
+        visibility: hidden;
+        transition: .3s;
+        transform: scale(1,0.3);
+        @media #{$xl}{
+            bottom: 70px;
+            left: 30px;
+        }
+        @media #{$lg}{
+            bottom: 60px;
+            left: 20px;
+        }
+        @media #{$xs}{
+            bottom: 50px;
+            left: 20px;
+        }
+        & span {
+            font-weight: 600;
+            font-size: 27px;
+            font-family: 'Syne', sans-serif;
+            text-transform: capitalize;
+            color: var(--tp-common-white);
+            @media #{$xl}{
+                font-size: 21px;
+            }
+            @media #{$lg}{
+                font-size: 18px;
+            }
+            @media #{$xs}{
+                font-size: 15px;
+            }   
+            & img {
+                margin-right: 5px;
+                display: inline-flex;
+            }
+        }
+    }
+    &__thumb-text-2 {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        padding: 3px 20px;
+        background: #5748FF;
+        & span {
+            text-transform: capitalize;
+            color: var(--tp-common-white);
+            font-weight: 600;
+            font-size: 20px;
+            font-family: 'Syne', sans-serif; 
+            @media #{$xl,$lg}{
+                font-size: 17px;
+            }   
+            @media #{$xs}{
+                font-size: 14px;
+            }   
+        }
+    }
+    &__thumb-box {
+        @media #{$md,$xs}{
+            flex-wrap: wrap;
+        }
+    }
+}

@@ -1,0 +1,19 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  18. instagram css start 
+/*----------------------------------------*/
+.tp-instagram-2{
+    &__thumb {
+        overflow: hidden;
+        &:hover {
+            & img {
+                transform: scale(1.2);
+            }
+        }
+        & img {
+            width: 100%;
+            transition: .6s;
+        }
+    }
+}

@@ -1,0 +1,86 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  19. process css start 
+/*----------------------------------------*/
+.tp-process-2  {
+    &__icon{
+        margin-bottom: 35px;
+        & span {
+            height: 110px;
+            width: 110px;
+            line-height: 110px;
+            text-align: center;
+            border-radius: 50%;
+            background-color: var(--tp-common-white);
+            box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.03);
+            display: inline-block;
+            &.icon-border {
+                border: 1px dashed #D9D9D9;
+            }
+        }
+    }
+    &__title{
+        font-weight: 500;
+        font-size: 23px;
+        font-family: var(--tp-ff-heading);
+        margin-bottom: 15px;
+        text-transform: capitalize;
+        @media #{$xl}{
+            font-size: 21px;
+        }
+        @media #{$lg}{
+            font-size: 20px;
+        }
+        @media #{$md}{
+            font-size: 19px;
+        }
+        @media #{$xs}{
+            font-size: 19px;
+        }
+    }
+    &__text{
+        & p {
+            font-size: 16px;
+            line-height: 28px;             
+            color: #72747C;
+            padding: 0 50px;     
+            @media #{$lg}{
+                padding:0 25px;
+                font-size: 15px;
+            }       
+            @media #{$md}{
+                font-size: 14px;
+            }       
+            @media #{$xs}{
+                font-size: 14px;
+                padding: 0;
+            }  
+            @media only screen and (min-width: 440px) and (max-width: 575px){
+                padding: 0 30px;
+            }     
+        }
+    }
+    &__shape{
+        position: absolute;
+        top: 14px;
+        left: 14%;
+        z-index: -1;
+        @media #{$xl,$lg,$md,$xs}{
+            display: none;
+        } 
+    }
+    &__white-bg{
+        background-color: var(--tp-common-white);
+        padding-top: 80px;
+        margin-top: -80px;
+        position:relative;
+        z-index: 11;
+        @media #{$xs}{
+            margin-top: 0;
+        }
+    }
+    &__item {
+        padding-top: 20px;
+    }
+}

@@ -1,0 +1,38 @@
+$colors: (
+    'common': (
+        'white': #ffffff,
+        'black': #09052F,
+        'black-2': #070707,
+        'black-3': #000000,
+        'black-4': #272F4D,
+        'red': #FF3F4A,
+        'green': #245757,
+        'purple': #7D2EFF,
+        'purple-2': #735CFC,
+        'pink': #F94E41,
+        'pink-2': #F8F3FF,
+        'pink-3': #FAF6FC,
+        'pink-4': #F43278,
+    ),
+    'heading': (
+        'primary': #09052F,
+    ),
+    'grey': (
+        '1':#EEEEF5,
+        '2':#F5F7FA,
+        '3':#5B646B,
+        '4':#787981,
+    ),
+    'text': (
+        'body':#72747C,
+    ),
+    'theme': (
+        '1':linear-gradient(90.07deg, #FF4E8D 32.43%, #AE34E8 58.79%, #3E8DFF 105.32%),
+        '2':#6B14FA,
+        '3':#951DF6,
+    ),
+    'border': (
+        '1':#EFF1F5,        
+    )
+);
+

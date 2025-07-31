@@ -1,0 +1,198 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  13. cta css start 
+/*----------------------------------------*/
+.tp-cta{
+    &__grey-bg{
+        position: relative;
+        &::after{
+            content: "";
+            bottom: 0;
+            left: 0;
+            height:135px;
+            width: 100%;
+            position: absolute;
+            background-color: var(--tp-grey-1);
+            z-index: -1;
+        }
+    }
+    &__bg{
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 29px;
+        padding-top: 65px;
+        padding-bottom: 70px;
+        @media #{$xs}{
+            background-position: right;
+        }
+    }
+    &__title{
+        font-weight: 500;
+        font-size: 45px;
+        line-height: 1.2;
+        text-transform: capitalize;
+        color: #FFFFFF;
+        margin-bottom: 30px;
+        @media #{$lg,$md}{
+            font-size: 35px;
+        }
+        @media #{$xs}{
+            font-size: 32px;
+            & br {
+                display: none;
+            }
+        }
+    }
+    &__content {
+        position: relative;
+        z-index: 11;
+    }
+    &__thumb{
+        position: absolute;
+        bottom: 0;
+        right: -25px;
+        @media #{$xl}{
+           right: -50px;
+        }
+        & img {
+            @media #{$xl}{
+                max-width: 90%;
+            }
+        }
+    }
+}
+.tp-cta-4 {
+    &__bg {
+        background: linear-gradient(148deg, #4951FF 0%, #A54AF5 55.19%, #FF2F7A 100%);
+        padding-top: 125px;
+        padding-bottom: 145px;
+        @media #{$lg,$md,$xs}{
+            padding: 90px 0;
+        }
+    }
+    &__shape-1 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        @media #{$xxl}{
+            left: -8%;
+        }
+        @media #{$xl}{
+            left: -16%;
+        }
+        @media #{$lg}{
+            left: -10%;
+        }
+        & img {
+            @media #{$lg}{
+                max-width: 60%;
+            }
+        }
+    }
+    &__shape-2 {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        z-index: 1;
+        @media #{$xxl}{
+            right: -8%;
+        }
+        @media #{$xl}{
+            right: -15%;
+        }
+        & img {
+            @media #{$xl,$lg}{
+                max-width: 90%;
+            }
+        }
+    }
+    &__shape-3 {
+        position: absolute;
+        bottom: 34%;
+        left: 30%;
+        animation: tptranslateX2 4s infinite alternate;
+        & img {
+            @media #{$xl,$lg}{
+                max-width: 50%;
+            }
+        }
+    }
+    &__shape-4 {
+        position: absolute;
+        bottom: 22%;
+        left: 29%;
+        & img {
+            @media #{$xl,$lg}{
+                max-width: 70%;
+            }
+        }
+    }
+    &__shape-5 {
+        position: absolute;
+        bottom: -37px;
+        left: 0;
+        @media #{$xxxl}{
+            bottom: -29px;
+        }
+        @media #{$xxl}{
+            bottom: -24px;
+        }
+        @media #{$xl}{
+            bottom: -21px;
+        }
+        @media #{$lg}{
+            bottom: -18px;
+        }
+        @media #{$md}{
+            bottom: -14px;
+        }
+    }
+    &__title{
+        color: var(--tp-common-white);
+        font-size: 55px;
+        font-weight: 500;
+        line-height: 1.1;
+        text-transform: capitalize;
+        margin-bottom: 40px;
+        @media #{$xxxl}{
+            font-size: 48px;
+        }
+        @media #{$xxl}{
+            font-size: 45px;
+        }
+        @media #{$xl,$lg,$md}{
+            font-size: 45px;
+        }
+        @media #{$xs}{
+            font-size: 30px;
+        }
+        @media #{$sm}{
+            font-size: 35px;
+        }
+    }
+    &__content {
+        position: relative;
+        z-index: 11;
+    }
+    &__shape-6 {
+        position: absolute;
+        top: 0;
+        right: 6%;
+        @media #{$xxxl}{
+            right: 2%;
+        }
+        @media #{$xxl}{
+            right: 1%;
+        }
+        @media #{$xl}{
+            right: -10%;
+            top: 15%;
+        }
+        & img {
+            @media #{$xl}{
+                max-width: 70%;
+            }
+        }
+    }
+}

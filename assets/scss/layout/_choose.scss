@@ -1,0 +1,289 @@
+
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  11. choose css start 
+/*----------------------------------------*/
+.tp-choose-3 {
+    &__sub-thumb-1{
+        position: absolute;
+        top: -105px;
+        right: 0;
+        z-index: 2;
+        transition: all 4s cubic-bezier(0.2, 0.8, 0.2, 1) 0s !important;
+        &:hover {
+            transform: translate(-20px, -30px);
+        }
+        @media #{$md}{
+            right: 30px;
+        }
+        @media #{$xs}{
+            position: static;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+        & img {
+            @media #{$xs}{
+                width: 100%;
+            }
+        }
+    }
+    &__sub-thumb-2{
+        position: absolute;
+        top: -170px;
+        left: 55px;
+        transition: all 4s cubic-bezier(0.2, 0.8, 0.2, 1) 0s !important;
+        &:hover {
+            transform: translate(-20px, -30px);
+        }
+        @media #{$lg}{
+            left: 20px;
+        }
+        @media #{$md}{
+            left: 90px;
+        }
+        @media #{$xs}{
+            position: static;
+        }
+        & img {
+            @media #{$xs}{
+                width: 100%;
+            }
+        }
+    }
+    &__main-thumb{
+        @media #{$xs}{
+            width: 100%;
+        }
+        & img {
+            width: 100%;
+        }
+        margin-left: 180px;
+        position: relative;
+        z-index: 1;
+        display: inline-block;
+        transition: all 4s cubic-bezier(0.2, 0.8, 0.2, 1) 0s !important;
+        &:hover {
+            transform: translate(-20px, -30px);
+        }
+        @media #{$lg}{
+            margin-left: 120px;
+        }
+        @media #{$md}{
+            margin-left: 0;
+            text-align: center;
+        }
+        @media #{$xs}{
+            margin-left: 0;
+        }
+        & img {
+            @media #{$xs}{
+                width: 100%;
+            }
+        }
+    }
+    &__shape-1{
+        position: absolute;
+        top: -200px;
+        right: 55px;
+        z-index: -1;
+        animation: zoom 7s infinite;
+    }
+    &__shape-2{
+        position: absolute;
+        bottom: 130px;
+        left: 21%;
+        animation: moving 9s linear infinite;
+    }
+    &__shape-3{
+        position: absolute;
+        bottom: 40px;
+        right: 15%;
+        animation: tpupdown 0.8s infinite alternate;
+    }
+    &__content {        
+        @media #{$md}{
+            margin-bottom: 240px;
+        }
+        @media #{$xs}{
+            margin-bottom: 50px;
+        }
+    }
+    &__thumb-box {
+        @media #{$md}{
+            text-align: center;
+        }
+    }
+}
+.tp-choose-5 {
+    &__space {
+        padding-top: 120px;
+        @media #{$lg,$md,$xs}{
+            padding-bottom: 100px;
+        }
+    }
+    &__area {
+        & .tp-choose-3__content{
+            margin-left: 60px;
+            @media #{$xl,$lg,$md,$xs}{
+                margin-left: 0;
+            }
+            @media #{$md,$xs}{
+                margin-left: 0;
+                margin-bottom: 40px;
+            }
+        }
+        & .tp-service-2__list-box-2 {
+            margin-right: 35px;
+        }
+        & .tp-service-2__list-box-2 {
+            margin-right: 35px;
+            @media #{$lg,$md,$xs}{
+                margin-right: 0;
+            }
+        }
+        & .tp-service-2__text {
+            & p {
+                padding-right: 60px;
+                color: #707481;    
+                @media #{$xs}{
+                   padding-right: 0;
+                   font-size: 14px;
+                }
+            }
+        }
+    }
+    &__main-thumb {
+        position: relative;
+        z-index: 1;
+    }
+    &__thumb-box {
+        margin-left: 30px;
+        @media #{$md}{
+            margin-left: 0;
+            text-align: center;
+        }
+        @media #{$xs}{
+            margin-left: 0;
+            text-align: center;
+        }
+    }
+    &__shape-1 {
+        position: absolute;
+        top: 15%;
+        left: 13%;
+        @media #{$md,$xs}{
+           display: none;
+        }
+    }
+    &__shape-2 {
+        position: absolute;
+        top: 55%;
+        left: 44%;
+        z-index: 2;
+        animation: tptranslateY2 4s infinite alternate;
+        @media #{$md,$xs}{
+            display: none;
+         }
+    }
+    &__shape-3 {
+        position: absolute;
+        top: 27%;
+        left:4%;
+        animation: tptranslateX2 4s infinite alternate;
+        @media #{$lg}{
+            left: 1%;
+        }
+        @media #{$md,$xs}{
+            display: none;
+         }
+    }
+    &__shape-4 {
+        position: absolute;
+        bottom: 14%;
+        right: 27%;
+        animation: moving 9s linear infinite;
+        z-index: 2;
+        @media #{$xl}{
+            right: 20%;
+        }
+        @media #{$lg,$md,$xs}{
+            display: none;
+        }
+    }
+}
+.tp-choose-6 {
+    &__icon {
+        margin-bottom: 30px;
+        & span {
+            position: relative;
+            display: inline-block;
+            color: var(--tp-common-purple-2);
+            & svg {
+                transition: all 0.3s ease-out 0s;
+            }
+            &::after{
+                height: 47px;
+                width: 47px;
+                border-radius: 50%;
+                background-color: rgba(115, 92, 252, 0.07);
+                position: absolute;
+                right: -12px;
+                top: 0;
+                content: '';
+            }        
+        }
+    }
+    &__title {
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+        text-transform: capitalize;
+        margin-bottom: 25px;
+        @media #{$xl,$sm}{
+           font-size: 19px;
+        }
+    }
+    &__content {
+        & p {
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 29px;
+            margin-bottom: 0;
+            @media #{$xl,$lg}{
+                font-size: 15px;
+            }
+            @media #{$md}{
+                font-size: 14px;
+            }
+            @media #{$xs}{
+                font-size: 13px;
+            }
+        }
+    }
+    &__item {
+        padding: 55px 35px;
+        @media #{$xl,$lg,$md,$xs}{
+            padding: 55px 28px;
+        }
+        &:hover {
+            & .tp-choose-6__icon {
+                & span {
+                    & svg {
+                        animation: icon-bounce 0.8s 1;
+                    }
+                }
+            }
+        }
+    }
+    &__item-wrap {
+        background: #FFF;
+        box-shadow: 0px 4px 17px 0px rgba(0, 0, 0, 0.08);
+        &.space {
+            margin-top: 30px;
+            @media #{$lg,$md,$xs}{
+                margin-top: 0;
+            }
+        }
+    }    
+}

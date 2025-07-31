@@ -1,0 +1,161 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  14. deal css start 
+/*----------------------------------------*/
+
+.tp-deal-4 {
+    &__bg{
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding-top: 115px;
+        padding-bottom: 30px;
+        @media #{$lg}{
+            padding-bottom: 100px;
+        }
+        @media #{$xs}{
+            padding-bottom: 100px;
+        }
+    }
+    &__content-box {
+        @media #{$md,$xs}{
+            margin-bottom: 50px;
+        }
+        & p {
+            font-weight: 400;
+            line-height: 29px;
+            color: #707480; 
+            padding-right: 250px;
+            padding-bottom: 10px;
+            @media #{$xl}{
+                padding-right: 200px;
+            }
+            @media #{$lg}{
+                padding-right: 65px;
+            }
+            @media #{$md,$xs}{
+                padding-right: 0px;
+            }
+        }
+    }
+    &__time-box {
+        display: inline-block;
+        text-align: center;
+        & i {            
+            color: var(--tp-common-black);
+            text-align: center;
+            font-family: var(--tp-ff-heading);
+            font-size: 13px;
+            font-weight: 500;
+            width: 42px;
+            height: 42px;
+            line-height: 42px;
+            background-color: var(--tp-common-white);
+            display: inline-block;
+            border-radius: 50%;
+            font-style: normal;
+            margin-bottom: 10px;
+            transition: .3s;
+            &:hover {
+                background-color: var(--tp-common-purple-2);
+                color: var(--tp-common-white);
+            }
+        }
+        & span {
+            color: #404040;
+            font-family: var(--tp-ff-heading);
+            font-size: 15px;
+            font-weight: 400;
+            display: block;
+        }
+    }
+    &__time-wrapper {
+        margin-bottom: 30px;
+        & ul {
+            & li {
+                display: inline-block;
+                padding-right: 16px;
+            }
+        }
+    }
+    &__shape-1 {
+        position: absolute;
+        right: 50px;
+        bottom: 9%;
+        z-index: 1;
+        @media #{$lg}{
+            bottom: -2%;
+            right: 26px;
+        }
+        @media #{$md}{
+            right: 21%;
+        }
+        @media #{$xs}{
+            right:5%;
+            bottom: 0%;
+        }
+        & img {
+            @media #{$lg}{
+                max-width: 90%;
+            }
+            @media #{$xs}{
+                max-width: 80%;
+            }
+        }
+    }
+    &__shape-2 {
+        position: absolute;
+        top: 19%;
+        left: 50px;
+        animation: zoom 7s infinite;
+        @media #{$xxl}{
+            top: 1%;
+            left: -25px;
+        }
+    }
+    &__shape-3 {
+        animation: moving 9s linear infinite;
+        position: absolute;
+        top: 23%;
+        right: 5%;
+        @media #{$xl}{
+            right: 1%;
+        }
+    }
+    &__shape-4 {
+        position: absolute;
+        top: 30%;
+        left: 39.6%;
+        animation: tpswing 2s ease-in-out 2s forwards infinite alternate;
+        transform-origin: top left;
+        @media #{$xxl}{
+            left: 35.6%;
+        }
+        @media #{$xl}{
+            left: 34.6%;
+        }
+    }
+    &__thumb-box {
+        padding-left: 27px;
+        @media #{$xl}{
+            padding-left: 0;
+            margin-left: -10px;
+        }
+    }
+    &__main-thumb{
+        margin-top: -17px;
+        @media #{$lg}{
+            margin-top: 0;
+        }
+        @media #{$md,$xs}{
+            margin-top: 0;
+            text-align: center;
+        }
+        & img {
+            max-width: inherit;
+            @media #{$xl,$lg,$md,$xs}{
+                max-width: 100%;
+            }
+        }
+    }
+}
