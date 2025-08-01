@@ -30,49 +30,95 @@
     <link rel="stylesheet" href="assets/css/spacing.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <style>
-        .workflow-section {
-  background: #f9f6fa;
-}
-
 .workflow-steps {
   display: flex;
   flex-direction: column;
-  gap: 40px;
-}
-.py-80 {
-  padding-top: 80px !important;
-  padding-bottom: 80px !important;
+  gap: 60px;
+  position: relative;
+  align-items: center;
 }
 
 .workflow-step {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  background: white;
-  padding: 24px;
-  border-radius: 16px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
 }
 
+.workflow-step.left {
+  flex-direction: row;
+}
+
+.workflow-step.right {
+  flex-direction: row-reverse;
+}
+
+/* Círculo grande del número */
 .step-number {
-  font-size: 20px;
-  font-weight: bold;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #742ddd, #f14658);
   color: white;
-  padding: 12px 20px;
-  border-radius: 50px;
-}
-.gradient-bg {
-    background: linear-gradient(90deg, #f15c92, #9168d9);
+  font-size: 28px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  flex-shrink: 0;
 }
 
+/* Caja blanca central */
+.step-box {
+  flex: 1;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  padding: 30px;
+  margin: 0 20px;
+}
+
+/* Texto dentro de la caja */
 .step-content {
-  flex-grow: 1;
-  margin-left: 20px;
+  flex: 1;
+}
+
+.step-content h4 {
+  margin-top: 0;
+  font-size: 20px;
+}
+
+.step-content p {
+  margin-bottom: 0;
+  color: #555;
+}
+
+/* Icono al otro lado del número */
+.step-icon {
+  width: 80px;
+  height: 80px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .step-icon img {
-  width: 115px;
-  height: auto;
+  width: auto;
+  height: 120px;
+}
+
+/* Responsive (opcional) */
+@media (max-width: 768px) {
+  .workflow-step {
+    flex-direction: column !important;
+  }
+  .step-box {
+    margin: 20px 0;
+  }
 }
 
     </style>
@@ -358,7 +404,7 @@
             <img src="assets/img/hero/hero-shape-1-8.png" alt="">
         </div>
         <div class="tp-hero__contact-box d-none d-xxl-block">
-            <a href="mailto:programasters@gmail.com">info@programasters.com</a>
+            <a href="mailto:programmasters.team@gmail.com">programmasters.team@gmail.com</a>
         </div>
         <div class="tp-hero__social-box d-none d-xxl-block">
             <a href="#">Twitter</a>
@@ -673,58 +719,69 @@
       <h2 class="section-title">Metodología ProgramMasters</h2>
       <p class="section-subtitle">Así convertimos tu idea en una solución funcional, paso a paso.</p>
     </div>
+  <div class="workflow-steps">
 
-    <div class="workflow-steps">
-      <!-- Paso 1 -->
-      <div class="workflow-step">
-        <div class="step-number gradient-bg">01</div>
-        <div class="step-content">
-          <h4 class="step-title">Reunión Inicial</h4>
-          <p class="step-text">Nos reunimos contigo para comprender tus objetivos, requisitos y expectativas.</p>
-        </div>
-        <div class="step-icon">
-            
-          <img src="12step.png" alt="Icono Reunión">
-        </div>
-      </div>
-
-      <!-- Paso 2 -->
-      <div class="workflow-step">
-        <div class="step-number gradient-bg">02</div>
-        <div class="step-content">
-          <h4 class="step-title">Definición de Requisitos</h4>
-          <p class="step-text">Colaboramos en identificar y documentar las necesidades de tu proyecto.</p>
-        </div>
-        <div class="step-icon">
-          <img src="23step.png" alt="Icono Requisitos">
-        </div>
-      </div>
-
-      <!-- Paso 3 -->
-      <div class="workflow-step">
-        <div class="step-number gradient-bg">03</div>
-        <div class="step-content">
-          <h4 class="step-title">Elaboración de la Propuesta</h4>
-          <p class="step-text">Creamos una propuesta detallada que se ajusta a tus requerimientos.</p>
-        </div>
-        <div class="step-icon">
-          <img src="step56.png" alt="Icono Propuesta">
-        </div>
-      </div>
-
-      <!-- Paso 4 -->
-      <div class="workflow-step">
-        <div class="step-number gradient-bg">04</div>
-        <div class="step-content">
-          <h4 class="step-title">Etapa de Desarrollo</h4>
-          <p class="step-text">Desarrollamos la solución asegurando calidad y funcionalidad.</p>
-        </div>
-        <div class="step-icon">
-          <img src="step45.png" alt="Icono Desarrollo">
-        </div>
+  <!-- Paso 1 -->
+  <div class="workflow-step left">
+    <div class="step-number">01</div>
+   
+    <div class="step-box">
+      <div class="step-content">
+        <h4>Reunión Inicial</h4>
+        <p>Nos reunimos contigo para comprender tus objetivos, requisitos y expectativas.</p>
       </div>
     </div>
+     <div class="step-icon">
+      <img src="12step.png" alt="Icono Reunión">
+    </div>
+  </div>
 
+  <!-- Paso 2 -->
+  <div class="workflow-step right">
+    <div class="step-number">02</div>
+ 
+    <div class="step-box">
+      <div class="step-content">
+        <h4>Definición de Requisitos</h4>
+        <p>Colaboramos en identificar y documentar las necesidades de tu proyecto.</p>
+      </div>
+    </div>
+       <div class="step-icon">
+      <img src="23step.png" alt="Icono Requisitos">
+    </div>
+  </div>
+
+  <!-- Paso 3 -->
+  <div class="workflow-step left">
+    <div class="step-number">03</div>
+   
+    <div class="step-box">
+      <div class="step-content">
+        <h4>Elaboración de la Propuesta</h4>
+        <p>Creamos una propuesta detallada que se ajusta a tus requerimientos.</p>
+      </div>
+    </div>
+     <div class="step-icon">
+      <img src="step56.png" alt="Icono Propuesta">
+    </div>
+  </div>
+
+  <!-- Paso 4 -->
+  <div class="workflow-step right">
+    <div class="step-number">04</div>
+  
+    <div class="step-box">
+      <div class="step-content">
+        <h4>Etapa de Desarrollo</h4>
+        <p>Desarrollamos la solución asegurando calidad y funcionalidad.</p>
+      </div>
+    </div>
+      <div class="step-icon">
+      <img src="step45.png" alt="Icono Desarrollo">
+    </div>
+  </div>
+
+</div>
     <div class="cta-box text-center mt-60">
       <h3 class="cta-title">¿Listo para llevar tu proyecto al siguiente nivel?</h3>
       <p class="cta-text">Contáctanos y descubre cómo ProgramMasters puede ayudarte a lograr tus grandes metas.</p>
@@ -886,7 +943,7 @@
                                 </span>
                             </div>
                             <div class="tp-footer__text">
-                                <a href="mailto:contacto@programmasters.net">contacto@programmasters.net</a>
+                                <a href="mailto:programmasters.team@gmail.com">programmasters.team@gmail.com</a>
                             </div>
                         </div>
                     </div>
