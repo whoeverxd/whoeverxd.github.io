@@ -372,37 +372,10 @@
 
     <main>
         <div class="container pt-50">
-            <div class="row align-items-center">
-                <div class="col-xl-6 col-lg-6">
-                    <canvas id="riveCanvas" width="800" height="500"></canvas>
-                </div>
-                <div class="col-xl-6 col-lg-6">
-                    <p>Descripción de la animación Rive.</p>
-                </div>
-            </div>
+
         </div>
 
-        <script src="https://unpkg.com/@rive-app/canvas@2.24.0"></script>
-        <script>
-            const canvas = document.getElementById('riveCanvas');
-
-            const r = new rive.Rive({
-                src: 'assets/rive/spring_demo.riv',
-                canvas: canvas,
-                autoplay: true,
-                onLoad: () => {
-                    console.log('Rive animation loaded successfully!');
-                },
-                onError: (error) => {
-                    console.error('Error loading Rive animation:', error);
-                }
-            });
-
-            // ejemplo de escuchar eventos
-            r.on('stateChange', (state) => {
-                console.log('State changed:', state);
-            });
-        </script>
+        
     </main>
     <footer>
         <!-- footer-area-start -->
