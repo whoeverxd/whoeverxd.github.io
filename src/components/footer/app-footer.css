@@ -1,0 +1,281 @@
+.footer-bottom-text{
+    color: #bfc8e6;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0.01em;
+    padding: 10px 0;
+}
+
+/* Trustpilot footer styles */
+.footer-trustpilot-row {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-top: 0.5rem;
+}
+.footer-trustpilot-stars {
+    display: flex;
+    gap: 0.1rem;
+}
+.trustpilot-star {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+}
+.footer-trustpilot-text {
+    color: #bfc8e6;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0.01em;
+}
+.footer-trustpilot-text-counter {
+    color: #bfc8e6;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0.01em;
+}
+#footer-support-email-link{
+    color:white;
+    font-size:16px;
+    text-decoration: none;
+}
+
+/*Footer area */
+.footer {
+    background-color: var(--bg-secondary);
+    color: var(--text-color);
+    padding: 2rem 1rem;
+    border-top: 1px solid #404a65;
+    padding: 0px;
+    margin: 0;
+
+}
+
+/* Social row del footer */
+.footer-social-row {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: 24px;
+    padding-bottom: 16px;
+    flex-wrap: wrap; /* allow icons to wrap on small screens */
+}
+
+.footer-social-icon img {
+    display: block;
+    margin: 0 auto;
+    height : 50px;
+    width: 50px;
+}
+.footer-logo {
+    width: 100%;
+    max-width: 100%;
+    display: block;
+ 
+    height: auto;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: row;
+    height: auto; /* was 400px; allow content to define height */
+    justify-content: space-between;
+    border-top : 1px solid #4C6085;
+    padding-top:50px;
+    gap: 24px; /* spacing between left/center/right */
+}
+
+.footer-left-box {
+    margin-right: 100px;
+    min-width: 276px;
+    width: 276px;
+
+}
+
+
+.footer-columns {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 3.5rem;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    min-width: 160px;
+    padding: 0 8px;
+    align-items: flex-start;
+}
+
+.footer-column-title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 20px;
+    margin-bottom: 40px;
+    color: #fff;
+    letter-spacing: 0.01em;
+    line-height: 1.2;
+}
+
+.footer-column-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.footer-column-list li {
+    margin-bottom: 0.2rem;
+}
+
+.footer-column-list a {
+    color: #bfc8e6;
+    text-decoration: none;
+    font-size: 1.04rem;
+    transition: color 0.2s;
+    line-height: 1.7;
+    display: inline-block;
+}
+.footer-column-list a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.footer-column-more {
+    color: #bfc8e6;
+    font-size: 1.04rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.2em;
+    margin-top: 0.1em;
+    user-select: none;
+}
+.footer-column-more::after {
+    content: '\25BC';
+    font-size: 0.8em;
+    margin-left: 0.2em;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+@media (max-width: 900px) {
+    .footer-columns {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
+    .footer-column {
+        min-width: 0;
+        width: 100%;
+        align-items: center;
+        padding: 0;
+    }
+    .footer-container {
+        padding: 32px 8px 0 8px;
+        flex-direction: column; /* stack sections */
+        align-items: center;
+        height: auto;
+        gap: 24px;
+        text-align: center;
+    }
+    .footer-center-box {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+        width: 100%;
+    }
+    .footer-left-box,
+    .footer-right-box {
+        align-items: center !important;
+        margin-right: 0;
+        min-width: 0;
+        width: 100%;
+        justify-content: center;
+    }
+    .footer-logo {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 220px; /* prevent huge logo on 600–900px */
+        width: 60%;       /* scale down relative to container */
+    }
+    .footer-trustpilot-row {
+        justify-content: center;
+        margin-top: 1.2rem;
+    }
+    .footer-social-row {
+        justify-content: center;
+        gap: 16px;
+        height: auto;
+        padding-bottom: 12px; /* more breathing room */
+        padding-top: 12px;    /* add missing top spacing */
+        margin-top: 8px;      /* ensure separation from elements above */
+        margin-bottom: 8px;   /* ensure separation from elements below */
+    }
+}
+
+@media (max-width: 600px) {
+    .footer-container {
+        padding: 20px 2vw 0 2vw;
+    }
+    .footer-logo {
+        /* Increase size on very small screens but keep within reasonable bounds */
+        width: clamp(120px, 45vw, 180px);
+        max-width: clamp(120px, 45vw, 180px);
+    }
+    .footer-trustpilot-text {
+        font-size: 1rem;
+    }
+    .trustpilot-star {
+        width: 22px;
+        height: 22px;
+    }
+    .footer-center-box,
+    .footer-columns {
+        gap: 0.7rem;
+    }
+    /* Strengthen spacing on extra-small screens */
+    .footer-social-row {
+        gap: 14px;
+        padding-top: 14px;
+        padding-bottom: 14px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+}
+
+/* Prevent Trustpilot overflow on mid-width desktops */
+@media (min-width: 901px) and (max-width: 1250px) {
+  .footer-container {
+    flex-wrap: wrap;            /* allow right box to wrap to next line if needed */
+    gap: 24px;                  /* balanced spacing between boxes */
+  }
+  .footer-left-box {
+    margin-right: 24px;         /* reduce large right margin */
+    flex: 0 1 240px;            /* allow to shrink a bit */
+    min-width: 200px;
+  }
+  .footer-center-box {
+    flex: 1 1 420px;            /* center grows and can shrink */
+    min-width: 0;               /* prevent content-based overflow */
+  }
+  .footer-right-box {
+    flex: 0 1 260px;            /* allow trustpilot to shrink or wrap */
+    min-width: 0;               /* avoid forcing overflow */
+  }
+  .footer-columns {
+    gap: 2rem;                  /* slightly tighter columns spacing */
+  }
+  .footer-trustpilot-row {
+    flex-wrap: wrap;            /* allow rating to wrap on narrow widths */
+  }
+}
+
